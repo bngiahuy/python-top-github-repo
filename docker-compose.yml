@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  top-github:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python main.py
