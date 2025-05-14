@@ -20,7 +20,7 @@ def job():
 
 def start_scheduler():
     logger.info("Starting scheduler")
-    schedule.every().day.do(job)
+    schedule.every().day.at("08:00").do(job)
     while True:
         schedule.run_pending()
         time.sleep(60)
